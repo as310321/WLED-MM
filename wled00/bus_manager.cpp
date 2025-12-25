@@ -889,7 +889,7 @@ BusHub75Matrix::BusHub75Matrix(BusConfig &bc) : Bus(bc.type, bc.start, bc.autoWh
   mxconfig.gpio.a = 5;
   mxconfig.gpio.b = 18;
   mxconfig.gpio.c = 19;
-  mxconfig.gpio.d = 21;
+  mxconfig.gpio.d = 33;
   mxconfig.gpio.e = 12;
 
 #else
