@@ -24,9 +24,9 @@ jobs:
     - name: Get default environments
       id: envs
       run: |
-        #echo "environments=$(pio project config --json-output | jq -cr '.[0][1][0][1]')" >> $GITHUB_OUTPUT
-        echo 'extends = env:esp32_4MB_V4_HUB75_forum' >> $GITHUB_OUTPUT
-        echo 'build_flags = ${env:esp32_4MB_V4_HUB75_forum.build_flags} -D CLIENT_SSID='\''"2.4G"'\'' -D CLIENT_PASS='\''"88998899"'\'' -D WLED_AP_SSID='\''"WLED-MM-HUB75"'\'' -D WLED_AP_PASS='\''"88998899"'\''' >> $GITHUB_OUTPUT
+        echo "environments=$(pio project config --json-output | jq -cr '.[0][1][0][1]')" >> $GITHUB_OUTPUT
+        #echo 'extends = env:esp32_4MB_V4_HUB75_forum' >> $GITHUB_OUTPUT
+        #echo 'build_flags = ${env:esp32_4MB_V4_HUB75_forum.build_flags} -D CLIENT_SSID='\''"2.4G"'\'' -D CLIENT_PASS='\''"88998899"'\'' -D WLED_AP_SSID='\''"WLED-MM-HUB75"'\'' -D WLED_AP_PASS='\''"88998899"'\''' >> $GITHUB_OUTPUT
     outputs:
       environments: ${{ steps.envs.outputs.environments }}
 
